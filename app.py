@@ -8,13 +8,10 @@ st.header('Survey Results 2021')
 st.subheader('Was the tutorial helpful?')
 
 ### --- LOAD DATAFRAME
-excel_file = 'Survey_Results.xlsx'
-sheet_name = 'DATA'
+excel_file = 'Survey_Results.csv'
 
-df = pd.read_excel(excel_file,
-                   sheet_name=sheet_name,
-                   usecols='B:D',
-                   header=3)
+
+df = pd.read_csv(excel_file)
 
 df_participants = pd.read_excel(excel_file,
                                 sheet_name= sheet_name,
